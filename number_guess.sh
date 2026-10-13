@@ -32,6 +32,7 @@ while read -r GUESS; do
     continue
   fi
 
+  GUESS=$((10#$GUESS))
   NUMBER_OF_GUESSES=$((NUMBER_OF_GUESSES + 1))
 
   if (( GUESS == SECRET_NUMBER )); then
